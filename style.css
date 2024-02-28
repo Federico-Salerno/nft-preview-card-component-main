@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'outfit';
+    background: var(--Very-dark-blue-main-BG);
+    height: 100vh;
+}
+
+.main-container {
+    width: 327px;
+    background: var(--Very-dark-blue-card-BG);
+    border-radius: 15px;
+    margin: 63px auto 34px;
+    padding: 24.5px;
+}
+
+.main-image
+.cube {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.title {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-top: 14px;
+}
+
+.paragraph {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    margin-top: 12px;
+    font-size: 0.9em;
+    line-height: 26px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    margin-top: 13px;
+}
+
+.eth-price {
+    color: var(--Cyan);
+    margin-right: 99px;
+}
+
+.time {
+    color: var(--Soft-blue);
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.divider {
+    border: 1px solid var(--Very-dark-blue-line);
+    margin-top: 25px;
+}
+
+.profile {
+    display: flex;
+}
+
+.avatar {
+    width: 33px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    margin-top: 16px;
+}
+
+.name {
+    margin-top: 22px;
+    margin-left: 16px;
+    font-weight: 300;
+    font-size: 0.86em;
+    color: var(--Soft-blue);
+}
+
+.name
+span {
+    color: var(--White);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--White);
+}
+
+.attribution a { 
+    color: var(--Cyan); 
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 400px) {
+    .main-container {
+        width: 350px;
+    }
+
+    .title {
+        margin-top: 19px;
+    }
+
+    .paragraph {
+        margin-top: 16px;
+    }
+
+    .data {
+        margin-top: 25px;
+    }
+
+    .divider {
+        margin-top: 24px;
+    }
+
+    .profile {
+        margin-bottom: 7px;
+    }
+
+    .main-image {
+        position: relative;
+    }
+
+    .main-container
+    .main-image
+    .icon-view {
+        position: absolute;
+        border-radius: 15px;
+        top: 0;
+        background: var(--Cyan);
+        width: 100%;
+        height: calc(100% - 4px);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    .main-container
+    .main-image
+    .icon-view:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .main-image
+    .icon-view
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title:hover,
+    .name:hover {
+        cursor: pointer;
+        color: var(--Cyan);
+    }
+}
